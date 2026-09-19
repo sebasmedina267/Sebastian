@@ -13,6 +13,6 @@ export class Bienvenida {
   mensaje = '';
 
   onSubmit() {
-    this.mensaje = `Hola ${this.nombre}, bienvenido a la aplicación.`;
+    this.mensaje = `Hola ${this.nombre}, bienvenido a la aplicación de Sebastian.`;
   }
 }
