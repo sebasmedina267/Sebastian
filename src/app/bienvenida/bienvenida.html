@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Pantalla de Bienvenida</h1>
+
+  <form (submit)="onSubmit()">
+    <label for="nombre">Introduce tu nombre:</label>
+    <input id="nombre" [(ngModel)]="nombre" name="nombre" />
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p *ngIf="mensaje">{{ mensaje }}</p>
+</div>
