@@ -6,8 +6,9 @@ WORKDIR /app
 COPY package*.json ./
 COPY angular.json ./
 COPY tsconfig*.json ./
-COPY src ./src
+COPY .prettierrc ./
 COPY public ./public
+COPY src ./src
 
 RUN npm ci
 RUN npm run build
@@ -16,8 +17,6 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 COPY --from=build /app/dist/sebastian/browser /usr/share/nginx/html
-
-# Configuración de Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
