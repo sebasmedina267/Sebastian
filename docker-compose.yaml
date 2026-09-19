@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  sebastian-angular:
+    image: sebastian/angular-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: always
