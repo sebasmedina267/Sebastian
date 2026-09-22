@@ -1,12 +1,29 @@
 <div class="container">
-  <h1>Pantalla de Bienvenida</h1>
+  <div class="welcome-card">
+    <h1>Bienvenido</h1>
+    <p class="subtitle">Completa tus datos para continuar</p>
 
-  <form (submit)="onSubmit()">
-    <label for="nombre">Introduce tu nombre:</label>
-    <input id="nombre" [(ngModel)]="nombre" name="nombre" />
+    <form (ngSubmit)="onSubmit()">
+      <div class="field-group">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" type="text" [(ngModel)]="nombre" name="nombre" placeholder="Escribe tu nombre" />
+      </div>
 
-    <button type="submit">Entrar</button>
-  </form>
+      <div class="field-group">
+        <label for="email">Correo electrónico</label>
+        <input id="email" type="email" placeholder="ejemplo@correo.com" />
+      </div>
 
-  <p *ngIf="mensaje">{{ mensaje }}</p>
+      <div class="field-group">
+        <label for="descripcion">¿Qué te motiva a entrar?</label>
+        <textarea id="descripcion" rows="5" placeholder="Escribe una breve descripción..."></textarea>
+      </div>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <div class="message" *ngIf="mensaje">
+      <p>{{ mensaje }}</p>
+    </div>
+  </div>
 </div>
