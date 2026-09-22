@@ -100,6 +100,33 @@ h1 {
   line-height: 1.7;
 }
 
+.mini-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.mini-feature {
+  background: linear-gradient(135deg, #eef6ff, #f8fbff);
+  border: 1px solid #dfeeff;
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.mini-feature span {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.mini-feature p {
+  margin: 0;
+  color: #1e3a5f;
+  font-weight: 600;
+}
+
 form {
   display: flex;
   flex-direction: column;
