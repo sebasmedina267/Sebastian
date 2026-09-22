@@ -10,23 +10,73 @@
 
 .welcome-card {
   width: 100%;
-  max-width: 560px;
+  max-width: 620px;
   background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 28px rgba(25, 118, 210, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(25, 118, 210, 0.16);
   padding: 32px;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  border-radius: 16px;
+  padding: 22px 20px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 h1 {
   margin: 0 0 8px;
   text-align: center;
-  color: #0d47a1;
+  color: white;
+  font-size: 2rem;
 }
 
 .subtitle {
-  margin: 0 0 24px;
+  margin: 0;
   text-align: center;
-  color: #5f6c7b;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.98rem;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-item {
+  background: #f3f8ff;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.stat-item strong {
+  display: block;
+  color: #0d47a1;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.stat-item span {
+  color: #475569;
+  font-size: 0.8rem;
 }
 
 form {
@@ -93,4 +143,14 @@ button:hover {
   margin: 0;
   color: #1b5e20;
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-card {
+    padding: 24px 18px;
+  }
 }
